@@ -31,12 +31,7 @@ cd SDEK-Proxy-Chain-API
 npm install
 \```
 
-3. Set up the `.env` file with environment variables:
-\```
-SDEK_API_ENDPOINT=<test_or_production_endpoint>
-SDEK_API_KEY=<your_sdek_api_key>
-MONGODB_URI=<your_mongo_uri>
-\```
+3. Set up the `.env` file with environment variables listed below.
 
 4. Start the server:
 \```bash
