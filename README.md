@@ -1,6 +1,6 @@
 # SDEK Proxy Chain API 🚀
 
-The SDEK Proxy Chain API is a caching solution between the new SDEK API 2.0 and the delivery cost calculation interface on a website. As SDEK transitions from its old direct client request system to their new API, this proxy ensures efficient and seamless frontend interactions.
+The SDEK Proxy Chain API acts as an optimized bridge between the SDEK's revamped API 2.0 and the website's delivery cost calculation mechanism. As SDEK pivots from its traditional direct client requests to its modern API, our proxy enhances frontend user experiences by efficiently redistributing the search load from SDEK's infrastructure to the client-side servers.
 
 ## Features 🌟
 1. **Token Authentication**: Handles authentication tokens using provided test keys. Easily switch between test and production API endpoints.
