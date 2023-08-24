@@ -64,6 +64,7 @@ MONGODB_COLLECTION_DELIVERYPOINTS=delivery_points
 # express endpoint
 EXPRESS_PORT=3000
 EXPRESS_HOST=127.0.0.1
+```
 
 ## Frontend Workflow 🖥️
 - Users input their city name in a `select2` selector, getting suggestions (`select2 ajax` hitting `/cities?q=`).
