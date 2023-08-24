@@ -43,6 +43,28 @@ MONGODB_URI=<your_mongo_uri>
 npm start
 \```
 
+## Development Environment Variables 📁
+
+```env
+# Credentials for Bearer Token
+CLIENT_ID=EMscd6r9JnFiQ3bLoyjJY6eM78JrJceI
+CLIENT_SECRET=PjLZkKBHEiLK3YsjtNrt3TGNG0ahs3kG
+
+# SDEK API endpoints
+API_SDEK_TOKEN=https://api.edu.cdek.ru/v2/oauth/token
+API_SDEK_CITIES=https://api.cdek.ru/v2/location/cities
+API_SDEK_DELIVERYPOINTS=https://api.cdek.ru/v2/deliverypoints
+
+# mongoDB connection
+MONGODB_URL=mongodb://127.0.0.1:27017
+MONGODB_DBNAME=SDEK
+MONGODB_COLLECTION_CITIES=Cities
+MONGODB_COLLECTION_DELIVERYPOINTS=delivery_points
+
+# express endpoint
+EXPRESS_PORT=3000
+EXPRESS_HOST=127.0.0.1
+
 ## Frontend Workflow 🖥️
 - Users input their city name in a `select2` selector, getting suggestions (`select2 ajax` hitting `/cities?q=`).
 - After choosing a city, users select a delivery type (PVZ or POSTAMAT).
