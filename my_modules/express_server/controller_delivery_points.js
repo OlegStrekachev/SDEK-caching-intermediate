@@ -1,4 +1,3 @@
-import { MongoClient } from "mongodb";
 import client from "./server.js";
 import dotenv from "dotenv";
 
@@ -12,25 +11,24 @@ export async function destinationQuery(req, res) {
     const { city } = req.query;
     const { path } = req;
 
-    console.log(req.query, q, city, path);
-    const PVZ_points = await searchDeliveryPoints(q, city, path);
+    // console.log(req.query, q, city, path);
 
-    console.log(PVZ_points);
+    const delivery_points = await searchDeliveryPoints(q, city, path);
 
-    // const formattedPVZ_points = PVZ_points.map((point) => ({
-    //   id: point._id,
-    //   name: point.name,
-    //   address: point.address,
-    // }));
+    // console.log(delivery_points);
 
-    return res.json(PVZ_points);
+    return res.json(delivery_points);
   } catch (error) {
     console.error(error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
+
+
 async function searchDeliveryPoints(query, city, path) {
+
+  // conditional assignment of type depending on the path of the request (pvz or postamat)
   let type;
   if (path === "/pvz") {
     type = "PVZ";
@@ -39,6 +37,8 @@ async function searchDeliveryPoints(query, city, path) {
   } else {
     throw new Error("Invalid path");
   }
+
+  // search for delivery points in the database
 
   const deliveryPoints = await client
     .db(process.env.MONGODB_DBNAME)

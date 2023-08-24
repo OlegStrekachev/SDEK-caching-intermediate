@@ -4,11 +4,14 @@ import fetch from "node-fetch";
 dotenv.config();
 
 // Define the parameters for the request
+
 const params = querystring.stringify({
   grant_type: "client_credentials",
   client_id: process.env.CLIENT_ID,
   client_secret: process.env.CLIENT_SECRET,
 });
+
+// Retrieve the access token
 
 export async function getAccessToken() {
 

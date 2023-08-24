@@ -7,6 +7,8 @@ dotenv.config();
 
 const router = Router();
 
+// Defining the routes for the API endpoints
+
 router.get("/cities", cityQuery);
 
 router.get("/pvz", destinationQuery);

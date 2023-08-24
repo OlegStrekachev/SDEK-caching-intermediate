@@ -9,7 +9,7 @@ dotenv.config();
 export async function writeToMongoDB() {
   const { cities_data, deliverypoints_data } = await fetchData(); // call the fetchData() function to retrieve the data
 
-  const client = new MongoClient(process.env.MONGODB_URL); // create a new MongoClient
+  const client = new MongoClient(process.env.MONGODB_URL); // create a new MongoClient 
 
   try {
     // Use connect method to connect to the Server

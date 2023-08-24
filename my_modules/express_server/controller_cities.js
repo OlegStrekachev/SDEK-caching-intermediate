@@ -1,10 +1,9 @@
-import { MongoClient } from "mongodb";
 import client from "./server.js";
 import dotenv from "dotenv";
 
 dotenv.config();
 
-// Search for cities
+// Function that returns cities that match the query
 
 export async function cityQuery(req, res) {
   try {
@@ -27,6 +26,8 @@ export async function cityQuery(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+// Function that searches for cities in the database
 
 async function searchCities(query) {
   const cities = await client

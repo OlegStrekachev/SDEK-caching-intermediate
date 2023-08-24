@@ -3,7 +3,7 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
-// Define function to make an authorized request to SDEK API and return the data
+// Define function to make an authorized request to SDEK API
 
 async function authorizedRequest(token, api_endpoint) {
   try {
