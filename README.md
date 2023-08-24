@@ -47,8 +47,8 @@ npm start
 
 ```env
 # Credentials for Bearer Token
-CLIENT_ID=EMscd6r9JnFiQ3bLoyjJY6eM78JrJceI
-CLIENT_SECRET=PjLZkKBHEiLK3YsjtNrt3TGNG0ahs3kG
+CLIENT_ID=your_client_id
+CLIENT_SECRET=your_secret
 
 # SDEK API endpoints
 API_SDEK_TOKEN=https://api.edu.cdek.ru/v2/oauth/token
@@ -56,14 +56,14 @@ API_SDEK_CITIES=https://api.cdek.ru/v2/location/cities
 API_SDEK_DELIVERYPOINTS=https://api.cdek.ru/v2/deliverypoints
 
 # mongoDB connection
-MONGODB_URL=mongodb://127.0.0.1:27017
-MONGODB_DBNAME=SDEK
-MONGODB_COLLECTION_CITIES=Cities
-MONGODB_COLLECTION_DELIVERYPOINTS=delivery_points
+MONGODB_URL=your_connection_string
+MONGODB_DBNAME=your_DB_name
+MONGODB_COLLECTION_CITIES=your_cities_collection
+MONGODB_COLLECTION_DELIVERYPOINTS=your_delivery_points_collection
 
 # express endpoint
-EXPRESS_PORT=3000
-EXPRESS_HOST=127.0.0.1
+EXPRESS_PORT=your_express_port
+EXPRESS_HOST=your_express_host
 ```
 
 ## Frontend Workflow 🖥️
