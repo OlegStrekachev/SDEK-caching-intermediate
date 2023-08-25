@@ -3,7 +3,7 @@ import dotenv from "dotenv";
 import fetch from "node-fetch";
 dotenv.config();
 
-// Define the parameters for the request
+// Using query string to format the parameters for the request
 
 const params = querystring.stringify({
   grant_type: "client_credentials",
@@ -21,6 +21,7 @@ export async function getAccessToken() {
       headers: {
         "Content-Type": "application/x-www-form-urlencoded",
       },
+// using params to format the body of the request
       body: params,
     });
 
@@ -33,7 +34,7 @@ export async function getAccessToken() {
     if (!json.access_token) {
       throw new Error("No access token found in response!");
     }
-
+// return the access token
     return json.access_token;
   } catch (error) {
     console.error("error in getAccessToken: ", error);

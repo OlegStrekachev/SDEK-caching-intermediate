@@ -9,11 +9,16 @@ export async function cityQuery(req, res) {
   try {
     const { q } = req.query;
 
+
+    // if the query is empty, return an empty array
+
     if (!q || q.length <= 0) {
       return res.json([]);
     }
 
     const cities = await searchCities(q);
+
+    // format the city array to display the city, region and country in the dropdown
 
     const formattedCities = cities.map((city) => ({
       id: city.code,

@@ -6,7 +6,6 @@ dotenv.config();
 
 import router from "./express_router.js";
 
-
 const client = new MongoClient(process.env.MONGODB_URL);
 
 const app = express();

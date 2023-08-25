@@ -7,6 +7,7 @@ dotenv.config();
 
 export async function destinationQuery(req, res) {
   try {
+    // Deconstructing the query parameters into separate variables
     const { q } = req.query;
     const { city } = req.query;
     const { path } = req;
@@ -48,6 +49,7 @@ async function searchDeliveryPoints(query, city, path) {
         $match: {
           type: type,
           "location.city_code": parseInt(city),
+          // spread operator to add a new field to the query if the query is not empty
           ...(query ? { name: { $regex: new RegExp(`${query}`, "i") } } : {}),
         },
       },

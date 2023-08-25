@@ -7,6 +7,11 @@ The SDEK Proxy Chain API acts as an optimized bridge between the SDEK's revamped
 2. **Data Management**: Downloads and updates the city database, delivery points (PVZ), and postamats. Data stored in MongoDB.
 3. **Search Interfaces**: Offers endpoints for cities, PVZs, and postamats with user input suggestions.
 
+## Technologies Used 🛠️
+- **Backend**: Node.js, Express
+- **Database**: MongoDB
+- **Authentication**: JWT
+
 ## Endpoints 🌐
 1. `/cities?q=...`: Yields up to 25 matching cities (returning city ID and name in the "City, Region, Country" format).
 2. `/pvz?city=ID&q=...`: Fetches up to 25 matching PVZs for the input city.
@@ -35,7 +40,7 @@ npm install
 
 4. Start the server:
 \```bash
-npm start
+npm run dev
 \```
 
 ## Development Environment Variables 📁
